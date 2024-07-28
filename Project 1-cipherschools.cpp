@@ -1,5 +1,4 @@
 Project code:
-
 #include <iostream>
 using namespace std;
 
@@ -100,13 +99,13 @@ public:
 
 int main() {
     BST tree;
-    tree.root = tree.insert(tree.root, 40);
-    tree.insert(tree.root, 20);
-    tree.insert(tree.root, 10);
+    tree.root = tree.insert(tree.root, 50);
     tree.insert(tree.root, 30);
-    tree.insert(tree.root, 60);
-    tree.insert(tree.root, 50);
+    tree.insert(tree.root, 20);
+    tree.insert(tree.root, 40);
     tree.insert(tree.root, 70);
+    tree.insert(tree.root, 60);
+    tree.insert(tree.root, 80);
 
     cout << "InOrder traversal: ";
     tree.inOrder(tree.root);
@@ -120,10 +119,10 @@ int main() {
     tree.postOrder(tree.root);
     cout << endl;
 
-    cout << "Search for 30: " << (tree.search(tree.root, 30) != nullptr ? "Found" : "Not Found") << endl;
+    cout << "Search for 40: " << (tree.search(tree.root, 40) != nullptr ? "Found" : "Not Found") << endl;
     
-    cout << "Delete 10\n";
-    tree.deleteNode(tree.root, 10);
+    cout << "Delete 30\n";
+    tree.deleteNode(tree.root, 30);
     cout << "InOrder traversal after deletion: ";
     tree.inOrder(tree.root);
     cout << endl;
@@ -131,38 +130,35 @@ int main() {
     return 0;
 }
 
-Output:
-InOrder traversal: 10 20 30 40 50 60 70 
-PreOrder traversal: 40 20 10 30 60 50 70 
-PostOrder traversal: 10 30 20 50 70 60 40 
-Search for 30: Found
-Delete 10
-InOrder traversal after deletion: 20 30 40 50 60 70 
-
-
-=== Code Execution Successful ===
-
-project document:
-
+Project overview:
 
 Programming Language: C++
+
 Development Environment: Any C++ compatible IDE (e.g., Visual Studio, DevCpp)
-Project Details: Overview,Features and Functionalities,Usage
-Project Title: Implementation of Binary search tree(BST)
 
-This program demonstrates a basic implementation of a Binary Search Tree (BST) in C++. 
-Here's a summary of the key components and functionalities:Node Structure: Represents a node in the tree with data, left, and right pointers.BST Class: Manages the root of the tree and provides methods for:Inserting a node (insert)Searching for a node (search)Finding the minimum value node (findMin)Deleting a node (deleteNode)Performing in-order (inOrder), pre-order (preOrder), and post-order (postOrder) traversals.
-Main Function:Inserts new values into the BST (40, 20, 10, 30, 60, 50, 70).
-Prints the tree in in-order, pre-order, and 
-post-order traversals.
-Searches for the value 30 in the tree.
-Deletes the node with value 10 and prints the in-order traversal after deletion.
+Project Title: Implementation of Binary Search Tree (BST)
 
+Project Details:
+This program demonstrates a basic implementation of a Binary Search Tree (BST) in C++.
 
+Features and Functionalities:
+
+Node Structure: Represents a node in the tree with data, left, and right pointers.
+BST Class: Manages the root of the tree and provides methods for:
+Inserting a node (insert)
+Searching for a node (search)
+Finding the minimum value node (findMin)
+Deleting a node (deleteNode)
+Performing in-order (inOrder), pre-order (preOrder), and post-order (postOrder) traversals.
+Main Function:
+
+Inserts values (50, 30, 20, 40, 70, 60, 80) into the BST.
+Prints the tree in in-order, pre-order, and post-order traversals.
+Searches for the value 40 in the tree.
+Deletes the node with value 30 and prints the in-order traversal after deletion.
 Time Complexity:
-Average Case : O(log n) for insertion, deletion, and search operations.
- Worst Case : O(n) for insertion, deletion, and search operations in an unbalanced BST.
 
+Average Case: O(log n) for insertion, deletion, and search operations.
+Worst Case: O(n) for insertion, deletion, and search operations in an unbalanced BST.
 Usage:
-The main function demonstrates the usage of the BST class by performing a series of insertions, a search, a deletion, and different types of traversals. The following operations are performed:
-
+The main function demonstrates the usage of the BST class by performing a series of insertions, a search, a deletion, and different types of traversals.
